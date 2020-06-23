@@ -1,0 +1,7 @@
+{
+    "introductory_message":"Hola!\nQuieres hacer un pedido? Envia: 1\nQuieres saber mas? Envia: 2",
+    "information_message":"Aqui vendemos solo dos paellas:\nLa buena\ny\nLa mala\nSi quieres pedir envia: 1",
+    "order_message":"Para ordenar la paella buena envia: 1\nPara ordenar la paella mala envia:2",
+    "order_confirmation_message":"Perfecto, tu pedido ha sido confirmado",
+    "error_message":"Error, numero equivocado."
+}
