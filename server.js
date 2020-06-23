@@ -7,6 +7,8 @@ const bodyParser = require('body-parser');
 
 const messages = require('./messages.json');
 
+const sendMessage = require('./methods/sendMessage.js').sendMessage;
+
 const port = 8000;
 
 const app = express();
@@ -25,56 +27,32 @@ app.post('/message', urlencodedparser, (req, res) => {
             case messages['introductory_message']:
                 switch(receivedMessage) {
                     case 1:
-                        client.messages.create({
-                            from:req.body.To,
-                            body:messages['order_message'],
-                            to:req.body.From
-                        }).then(message => console.log(`Sent message ${message.sid}`));
+                        sendMessage(client, req, messages['order_message']);
                         break;
                     case 2:
-                        client.messages.create({
-                            from:req.body.To,
-                            body:messages['information_message'],
-                            to:req.body.From
-                        }).then(message => console.log(`Sent message ${message.sid}`));
+                        sendMessage(client, req, messages['information_message']);
                         break;
                     default:
-                        client.messages.create({
-                            from:req.body.To,
-                            body:messages['error_message'],
-                            to:req.body.From
-                        }).then(message => console.log(`Sent message ${message.sid}`));
+                        sendMessage(client, req, messages['error_message']);
                 };
                 break;
             case messages['information_message']:
                 switch(receivedMessage) {
                     case 1:
-                        client.messages.create({
-                            from:req.body.To,
-                            body:messages['order_message'],
-                            to:req.body.From
-                        }).then(message => console.log(`Sent message ${message.sid}`));
+                        sendMessage(client, req, messages['order_message']);
                         break;
                     default:
                         console.log('No message sent');
                 };
                 break;
             case messages['order_message']:
-                client.messages.create({
-                    from:req.body.To,
-                    body:messages['order_confirmation_message'],
-                    to:req.body.From
-                }).then(message => console.log(`Sent message ${message.sid}`));
+                sendMessage(client, req, messages['order_confirmation_message']);
                 break;
             case messages['order_confirmation_message']:
                 console.log('No message sent.');
                 break;
             default:
-                client.messages.create({
-                    from:req.body.To,
-                    body:messages['introductory_message'],
-                    to:req.body.From
-                }).then(message => console.log(`Sent message ${message.sid}`))
+                sendMessage(client, req, messages['introductory_message']);
         }
         res.status(200).send('succesful');
     });
