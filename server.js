@@ -2,6 +2,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 require('dotenv').config();
+const client = require('twilio')(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN)
 
 const port = 8000;
 
@@ -14,7 +15,13 @@ app.get('/', (req, res) => {
 });
 
 app.post('/message', urlencodedparser, (req, res) => {
-    console.log(req.body.Body);
+    client.messages.create({
+        from:req.body.To,
+        body:`You said ${req.body.Body}`,
+        to:req.body.From
+    }).then(message => {
+        console.log(`message ${message.sid} was delivered`);
+    });
 });
 
 app.listen(port, () => {
