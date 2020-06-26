@@ -1,0 +1,12 @@
+{
+    "INTRO_MESSAGE":"Hola!\nBienvenido al portal web de Paella Burquet.\nSi quieres hacer un pedido, envia el numero 1.\nPor favor envia el numero 1 y no la palabra \"uno\".\nSi quieres saber mas de nosotros, envia el numero 2",
+    "INFO_MESSAGE":"Somos el mejor lugar de paella en Colombia.\nTenemos variedades de paellas que puedes pedir por aca para tu proxima comida.\nPara mas informacion entra a www.paellaburquet.com\nPara hacer un pedido, envia el numero 1",
+    "PAELLA_MENU_MESSAGE":"Para pedir la paella Andaluza, envia el numero 1\nPara pedir la paella Mediterranea, envia el numero 2.\nPara pedir la paella Sevillana, envia el numero 3\nPara pedir la paella Flamenca, envia el numero 4\nPara pedir la paella Marinera, envia el numero 5\nPara pedir la paella Valenciana, envia el numero 6\nPara pedir la paella Vegetariana, envia el numero 7\nPara cancelar tu pedido, envia el numero 8",
+    "PORTIONS_MESSAGE":"Porfavor envia el numero de porciones.\nEnvia un numero mas no una palabra.",
+    "DATE_MESSAGE":"Porfavor envia la fecha para la cual necesitas que llege tu pedido",
+    "TIME_MESSAGE":"Porfavor envia la hora para la cual necesitas que llege tu pedido",
+    "NAME_MESSAGE":"Porvafor envia tu nombre",
+    "DIRECTION_MESSAGE":"Porfavor envia la direccion a la que quieres que llegue el pedido",
+    "ERROR_MESSAGE":"No podemos procesar tu mensaje.\nPorfavor revisa que hayas realmente enviado un numero mas no la palabra que representa al numero"
+
+}

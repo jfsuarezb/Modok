@@ -1,0 +1,7 @@
+//action types
+
+exports.UPDATE_EPOCH = 'UPDATE_EPOCH';
+exports.UPDATE_ORDER = 'UPDATE_ORDER';
+exports.CREATE_SESSION = 'CREATE_SESSION';
+exports.END_SESSION = 'END_SESSION';
+exports.RESTART_ORDER = 'RESTART_ORDER';
