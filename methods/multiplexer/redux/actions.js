@@ -15,7 +15,7 @@ exports.getEpochBySession = (phone) => {
     let epoch;
     let x;
     for (x of store.getState()) {
-        if (x.phone = phone) {
+        if (x.phone == phone) {
             epoch = x.epoch;
             break;
         }
